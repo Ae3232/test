@@ -248,10 +248,7 @@ a {
             -ms-flex-direction: row;
                 flex-direction: row; } }
   .header_navigation-item {
-    position: relative;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s; }
+    position: relative; }
     .header_navigation-item:not(:last-child) {
       margin-bottom: 16px; }
     @media screen and (min-width: 1024px) {
