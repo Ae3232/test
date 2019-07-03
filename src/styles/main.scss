@@ -1,0 +1,9 @@
+@import "helpers/reset.scss";
+@import "helpers/variables.scss";
+@import "helpers/mixin.scss";
+@import "helpers/fonts.scss";
+@import "helpers/base.scss";
+
+@import "../components/header/style.scss";
+@import "../components/main/style.scss";
+@import "../components/footer/style.scss";
