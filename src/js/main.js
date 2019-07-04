@@ -22,6 +22,7 @@ $(document).ready(function() {
 			$('.header_navigation').show();
 			$('.header_navigation-link').removeClass('open');
 			$('.header_navigation-item').removeClass("binded").hover(function() {
+				$(this).addClass('overflow');
 				$(this).children().first().toggleClass('open');
 		        $(this).children().next().toggleClass('hover');
 		    });
