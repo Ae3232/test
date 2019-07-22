@@ -1,0 +1,56 @@
+.layout {
+    text-align: center;
+    margin: 0 -24px;
+
+    @include tablet-resolution {
+        display: grid;
+        justify-items: center;
+        grid-gap: 3vw;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+    @include monitor-resolution {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &_item {
+        display: inline-block;
+        width: 90vw;
+        position: relative;
+        padding-bottom: 90vw;
+        border: 1px solid #cccccc;
+        box-sizing: content-box;
+        margin-bottom: 3%;
+
+        @include tablet-resolution {
+            width: 45vw;
+            padding-bottom: 45vw;
+            margin-bottom: 0;
+
+            &:first-child {
+                order: -2;
+            }
+            &:nth-child(3) {
+                order: -1;
+                grid-row-end: span 2;
+                padding-bottom: 90vw;
+            }
+        }
+        @include monitor-resolution {
+            width: 30vw;
+            padding-bottom: 30vw;
+
+            &:nth-child(3) {
+                padding-bottom: 60vw;
+            }
+        }
+    }
+    &_item-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

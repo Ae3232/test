@@ -1,0 +1,31 @@
+.search-form {
+    display: flex;
+
+    &_input {
+        width: 100%;
+        padding: 0 12px 0 42px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 16px;
+        line-height: 36px;
+        background: url(../img/find-icon.png) no-repeat 10px center;
+    }
+    &_button {
+        height: 38px;
+        padding: 0 18px;
+        margin-left: 6px;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        color: #fff;
+        background: none;
+        font-size: 12px;
+        text-transform: uppercase;
+        box-sizing: border-box;
+
+        &:hover {
+            background-color: rgba(224,224,224,0.7);
+        } 
+    }
+}

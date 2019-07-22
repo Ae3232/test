@@ -1,0 +1,87 @@
+.selection {
+    margin-top: 12px;
+
+    &_items-description {
+        margin-bottom: 16px;
+    }
+    &_items-elements {
+        background-color: #fff;
+        color: #000;
+        display: inline-block;
+        padding: 0 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 34px;
+    }
+    &_items-remove {
+        padding-left: 10px;
+        border-left: 1px solid #000;
+        cursor: pointer;
+    }
+    &_items-btn_wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_items-btn {
+        display: block;
+        width: 100%;
+        max-width: 280px;
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 40px;
+        text-transform: uppercase;
+        border-radius: 2px;
+        background-color: #9ca85a;
+        color: #fff;
+        cursor: pointer;
+        padding: 0 16px;
+
+        &:hover {
+            background-color: rgba(156,168,90,.75);
+        }
+    }
+    &_dialog {
+        position: fixed;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%) scale(0);
+        max-width: 280px;
+        padding: 24px;
+        z-index: 2;
+        background-color: #3f3f3f;
+        opacity: 0;
+        transition: .5s;
+
+        &.selection_dialog__show {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+    }
+    &_dialog-title {
+        text-transform: uppercase;
+        margin-bottom: 18px;
+    }
+    &_dialog-head {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_dialog-input {
+        font-size: 14px;
+        line-height: 34px;
+        padding-left: 12px;
+        border: 0;
+        border-radius: 4px;
+    }
+    &_dialog-select {
+        font-size: 14px;
+        line-height: 34px;
+        border: 0;
+    }
+    &_dialog-content {
+        background-color: #000;
+        padding: 12px;
+        max-height: 250px;
+        margin: 16px 0;
+        overflow: scroll;
+    }
+}

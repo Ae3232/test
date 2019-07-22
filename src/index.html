@@ -7,79 +7,189 @@
 	    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
         <title>Project</title>
+        <link rel="stylesheet" href="css/main.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
-        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
+        <div class="overlay"></div>
         <header class="header">
             <a href="" class="header_logo">
-                <img class="header_logo-img" src="img/logo.png" alt="">
+                <img src="img/logo.svg" alt="" class="header_logo-image">
             </a>
-            <nav class="header_navigation">
-                <ul class="header_navigation-list">
-                    <li class="header_navigation-item">
-                        <a href="" class="header_navigation-link">Tools</a>
-                        <ul class="header_submenu">
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Tools 1</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Tools 2</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header_navigation-item">
-                        <a href="" class="header_navigation-link">Products</a>
-                        <ul class="header_submenu">
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Products 1</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Products 2</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Products 3</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Products 4</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header_navigation-item">
-                        <a href="" class="header_navigation-link">Help</a>
-                        <ul class="header_submenu">
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Settings</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">FAQ</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="header_navigation-item">
-                        <a href="" class="header_navigation-link">Contacts</a>
-                        <ul class="header_submenu">
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">About us</a>
-                            </li>
-                            <li class="header_submenu-item">
-                                <a href="" class="header_submenu-link">Map</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <button class="header_btn"></button>
+            <h1 class="header_title">Тестовое задание</h1>
         </header>
         <main class="main">
-            <h1 class="main_title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum sit, non iure quisquam ratione natus voluptas id fugiat voluptatem, dignissimos unde, ullam necessitatibus praesentium excepturi amet ipsa. Beatae, quam, nostrum.</p>
-            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda.</p>
-            <p class="main_description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo quis modi labore iusto nulla rerum totam magni eos aliquid non ipsum rem sit, molestias sed nesciunt reprehenderit incidunt officiis, assumenda. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore recusandae aut tempora aliquam, officia, earum blanditiis assumenda. Alias eaque, ullam possimus ducimus cupiditate quam, nostrum similique quasi distinctio minima vel?</p>
+            <section class="section">
+                <form action="" class="search-form">
+                    <input placeholder="Найти..." type="search" class="search-form_input">
+                    <button type="submit" class="search-form_button">Найти</button>
+                </form>
+            </section>
+            <section class="section">
+                <div class="layout">
+                    <div class="layout_item">
+                            <img src="/img/image1.jpg" alt="" class="layout_item-image">
+                    </div>
+                    <div class="layout_item">
+                        <img src="/img/image2.jpg" alt="" class="layout_item-image">
+                    </div>
+                    <div class="layout_item">
+                        <img src="/img/image5.jpg" alt="" class="layout_item-image">
+                    </div>
+                    <div class="layout_item">
+                        <img src="/img/image4.jpg" alt="" class="layout_item-image">
+                    </div>
+                    <div class="layout_item">
+                        <img src="/img/image3.jpg" alt="" class="layout_item-image">
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <article class="article">
+                    <h1 class="article_title">Почему не рассматриваются заявки с жалобами на нарушение Правил игры?</h1>
+                    <div class="article_content">
+                        <p class="article_content-paragraph">После введения функционала «Пожаловаться» не рассматриваются заявки, созданные в Центр поддержки пользователей о нарушении Правил игры по следующим пунктам:</p>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="1">1. «Оскорбления и провокации»</summary>
+                            <div class="article_content-dropdown">
+                                <p>В данный пункт входит:</p>
+                                <ul class="article_content-list">
+                                    <li class="article_content-item">- использование ненормативной лексики и оскорбление собеседников, применение унизительных кличек и прозвищ по расовому, национальному, религиозному либо половому признаку, а также провоцирование собеседника к их использованию;</li>
+                                    <li class="article_content-item">- клевета, размещение заведомо ложной информации об Игре, Администрации, Модераторах или Пользователях;</li>
+                                    <li class="article_content-item">- угрозы реальной расправы в отношенииили представителей Администрации Проекта. Все виды соглашения</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="2">2. «Неинформативные сообщения»</summary>
+                            <div class="article_content-dropdown">
+                                <p>В данный пункт входит:</p>
+                                <ul class="article_content-list">
+                                    <li class="article_content-item">- размещение информации (сообщения, фразы, символов и пр.), направленной на отвлечение Пользователей от темы беседы (флуд);</li>
+                                    <li class="article_content-item">- все виды рекламных сообщений, в частности ссылки на интернет-ресурсы.</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="3">3. «Раскрытие позиций союзников»</summary>
+                            <div class="article_content-dropdown">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quisquam nemo placeat corrupti esse id nihil ipsa porro totam, labore neque commodi, in nesciunt, illum minima dicta facilis, natus iste?
+                            </div>
+                        </details>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="4">4. «Выталкивание союзника»</summary>
+                            <div class="article_content-dropdown">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quisquam nemo placeat corrupti esse id nihil ipsa porro totam, labore neque commodi, in nesciunt, illum minima dicta facilis, natus iste?
+                            </div>
+                        </details>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="5">5. «Неспортивное поведение»</summary>
+                            <div class="article_content-dropdown">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quisquam nemo placeat corrupti esse id nihil ipsa porro totam, labore neque commodi, in nesciunt, illum minima dicta facilis, natus iste?
+                            </div>
+                        </details>
+                        <details class="article_content-details">
+                            <summary class="article_content-summary" tabindex="6">6. «Повреждение союзников»</summary>
+                            <div class="article_content-dropdown">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit quisquam nemo placeat corrupti esse id nihil ipsa porro totam, labore neque commodi, in nesciunt, illum minima dicta facilis, natus iste?
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </section>
+            <section class="section">
+                <h1 class="section_title">Виджет</h1>
+                <div class="selection">
+                    <p class="selection_items-description">На данный момент у вас выбрано 2 элемента</p>
+                    <div class="selection_items-elements">
+                        <span class="selection_items-text">Элемент 5</span>
+                        <span class="selection_items-remove">x</span>
+                    </div>
+                    <div class="selection_items-elements">
+                        <span class="selection_items-text">Элемент 51</span>
+                        <span class="selection_items-remove">x</span>
+                    </div>
+                    <button class="selection_items-btn selection_items-btn__change">Изменить мой выбор</button>
+                    <div class="selection_dialog">
+                        <h2 class="selection_dialog-title">Диалог выбора элементов</h2>
+                        <div class="selection_dialog-head">
+                            <form action="" class="selection_dialog-search">
+                                <input type="search" placeholder="Поиск" class="selection_dialog-input">
+                            </form>
+                            <select name="" id="" class="selection_dialog-select">
+                                <option value="">Номер > 10</option>
+                                <option value="">Номер > 100</option>
+                                <option value="">Номер > 200</option>
+                            </select>
+                        </div>
+                        <div class="selection_dialog-content">
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element1" class="checkbox_image">
+                                <label class="checkbox_label" for="element1">Элемент 1</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element2" class="checkbox_image">
+                                <label class="checkbox_label" for="element2">Элемент 2</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element3" class="checkbox_image">
+                                <label class="checkbox_label" for="element3">Элемент 3</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element4" class="checkbox_image">
+                                <label class="checkbox_label" for="element4">Элемент 4</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element5" class="checkbox_image">
+                                <label class="checkbox_label" for="element5">Элемент 5</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element6" class="checkbox_image">
+                                <label class="checkbox_label" for="element6">Элемент 6</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element7" class="checkbox_image">
+                                <label class="checkbox_label" for="element7">Элемент 7</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element8" class="checkbox_image">
+                                <label class="checkbox_label" for="element8">Элемент 8</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element9" class="checkbox_image">
+                                <label class="checkbox_label" for="element9">Элемент 9</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element10" class="checkbox_image">
+                                <label class="checkbox_label" for="element10">Элемент 10</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element11" class="checkbox_image">
+                                <label class="checkbox_label" for="element11">Элемент 11</label>
+                            </div>
+                            <div for="" class="checkbox">
+                                <input type="checkbox" id="element12" class="checkbox_image">
+                                <label class="checkbox_label" for="element12">Элемент 12</label>
+                            </div>
+                        </div>
+                        <h2 class="selection_dialog-title">Выбранные элементы на данный момент</h2>
+                        <div class="selection_items-elements">
+                            <span class="selection_items-text">Элемент 5</span>
+                            <span class="selection_items-remove">x</span>
+                        </div>
+                        <div class="selection_items-elements">
+                        <span class="selection_items-text">Элемент 51</span>
+                        <span class="selection_items-remove">x</span>
+                    </div>
+                        <button class="selection_items-btn">Сохранить</button>
+                        <button class="selection_items-btn selection_items-btn__close">Отмена</button>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
-            <p class="footer_copyright">© 2019 Test</p>
+            <p class="footer_copyright">© 2019</p>
         </footer>
     </body>
 </html>
