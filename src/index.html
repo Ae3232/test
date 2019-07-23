@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="testTask">
 <html>
     <head>
         <meta charset="utf-8">
@@ -8,8 +9,10 @@
 	    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
         <title>Project</title>
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
     </head>
     <body>
         <div class="overlay"></div>
@@ -98,7 +101,7 @@
                     </div>
                 </article>
             </section>
-            <section class="section">
+            <section class="section" ng-controller="SimpleArrayCtrl">
                 <h1 class="section_title">Виджет</h1>
                 <div class="selection">
                     <p class="selection_items-description">На данный момент у вас выбрано 2 элемента</p>
@@ -115,7 +118,7 @@
                         <h2 class="selection_dialog-title">Диалог выбора элементов</h2>
                         <div class="selection_dialog-head">
                             <form action="" class="selection_dialog-search">
-                                <input type="search" placeholder="Поиск" class="selection_dialog-input">
+                                <input type="text" name="search" placeholder="Поиск" class="selection_dialog-input" ng-model="search.$">
                             </form>
                             <select name="" id="" class="selection_dialog-select">
                                 <option value="">Номер > 10</option>
@@ -124,62 +127,21 @@
                             </select>
                         </div>
                         <div class="selection_dialog-content">
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element1" class="checkbox_image">
-                                <label class="checkbox_label" for="element1">Элемент 1</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element2" class="checkbox_image">
-                                <label class="checkbox_label" for="element2">Элемент 2</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element3" class="checkbox_image">
-                                <label class="checkbox_label" for="element3">Элемент 3</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element4" class="checkbox_image">
-                                <label class="checkbox_label" for="element4">Элемент 4</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element5" class="checkbox_image">
-                                <label class="checkbox_label" for="element5">Элемент 5</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element6" class="checkbox_image">
-                                <label class="checkbox_label" for="element6">Элемент 6</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element7" class="checkbox_image">
-                                <label class="checkbox_label" for="element7">Элемент 7</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element8" class="checkbox_image">
-                                <label class="checkbox_label" for="element8">Элемент 8</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element9" class="checkbox_image">
-                                <label class="checkbox_label" for="element9">Элемент 9</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element10" class="checkbox_image">
-                                <label class="checkbox_label" for="element10">Элемент 10</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element11" class="checkbox_image">
-                                <label class="checkbox_label" for="element11">Элемент 11</label>
-                            </div>
-                            <div for="" class="checkbox">
-                                <input type="checkbox" id="element12" class="checkbox_image">
-                                <label class="checkbox_label" for="element12">Элемент 12</label>
+                            <div for="" class="checkbox" ng-repeat="fruitName in fruits | filter:search">
+                                <input  type="checkbox" 
+                                        id="{{fruitName}}" 
+                                        class="checkbox_image" 
+                                        name="selectedFruits[]"
+                                        value="{{fruitName}}"
+                                        ng-module="toggleSelection['fruitName']"
+                                        ng-checked="selection.indexOf(fruitName) > -1"
+                                        ng-click="toggleSelection(fruitName)"> 
+                                <label class="checkbox_label" for="{{fruitName}}">{{fruitName}}</label>
                             </div>
                         </div>
                         <h2 class="selection_dialog-title">Выбранные элементы на данный момент</h2>
-                        <div class="selection_items-elements">
-                            <span class="selection_items-text">Элемент 5</span>
-                            <span class="selection_items-remove">x</span>
-                        </div>
-                        <div class="selection_items-elements">
-                        <span class="selection_items-text">Элемент 51</span>
+                        <div class="selection_items-elements" type="{{fruits.type}}" ng-repeat="fruitName in fruits | filter : filterByCategory">
+                        <span class="selection_items-text">{{fruitName}}</span>
                         <span class="selection_items-remove">x</span>
                     </div>
                         <button class="selection_items-btn">Сохранить</button>
