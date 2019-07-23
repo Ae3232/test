@@ -6,7 +6,11 @@ app.controller('SimpleArrayCtrl', ['$scope', function SimpleArrayCtrl($scope) {
   $scope.fruits = ['fruit1', 'fruit2', 'fruit3', 'fruit4'];
 
   // Selected fruits
-  $scope.selection = ['fruit1', 'fruit4'];
+  $scope.selection = {
+  			"fruit1" : true,
+			"fruit4" : true,
+			"fruit2" : false
+  }
 
   // Toggle selection for a given fruit by name
   $scope.toggleSelection = function toggleSelection(fruitName) {
@@ -22,9 +26,14 @@ app.controller('SimpleArrayCtrl', ['$scope', function SimpleArrayCtrl($scope) {
       $scope.selection.push(fruitName);
     }
   };
-  $scope.filterByCategory  = function(fruit) {
-       var displayUser;
-       displayUser =  $scope.toggleSelection; 
-       return displayUser;
+  $scope.filterFruit  = function(fruit) {
+       var displayFruit;
+       displayFruit =  $scope.toggleSelection[fruit.fruitName] || noFilter($scope.toggleSelection);    
+       return displayFruit;
    };
+   function noFilter(filterObj) {
+      return Object.
+        keys(filterObj).
+        every(function (key) { return !filterObj[key]; });
+    }
 }]);

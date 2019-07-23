@@ -104,13 +104,9 @@
             <section class="section" ng-controller="SimpleArrayCtrl">
                 <h1 class="section_title">Виджет</h1>
                 <div class="selection">
-                    <p class="selection_items-description">На данный момент у вас выбрано 2 элемента</p>
-                    <div class="selection_items-elements">
-                        <span class="selection_items-text">Элемент 5</span>
-                        <span class="selection_items-remove">x</span>
-                    </div>
-                    <div class="selection_items-elements">
-                        <span class="selection_items-text">Элемент 51</span>
+                    <p class="selection_items-description">На данный момент у вас выбрано <span>{{ (fruits | filter:filter).length }}</span> элемента</p>
+                    <div class="selection_items-elements" ng-repeat="fruitName in fruits | filter : filterFruit">
+                        <span class="selection_items-text">{{fruitName}}</span>
                         <span class="selection_items-remove">x</span>
                     </div>
                     <button class="selection_items-btn selection_items-btn__change">Изменить мой выбор</button>
@@ -133,14 +129,12 @@
                                         class="checkbox_image" 
                                         name="selectedFruits[]"
                                         value="{{fruitName}}"
-                                        ng-module="toggleSelection['fruitName']"
-                                        ng-checked="selection.indexOf(fruitName) > -1"
-                                        ng-click="toggleSelection(fruitName)"> 
+                                        ng-model="toggleSelection['fruit']">
                                 <label class="checkbox_label" for="{{fruitName}}">{{fruitName}}</label>
                             </div>
                         </div>
                         <h2 class="selection_dialog-title">Выбранные элементы на данный момент</h2>
-                        <div class="selection_items-elements" type="{{fruits.type}}" ng-repeat="fruitName in fruits | filter : filterByCategory">
+                        <div class="selection_items-elements" ng-repeat="fruitName in fruits | filter : filterFruit">
                         <span class="selection_items-text">{{fruitName}}</span>
                         <span class="selection_items-remove">x</span>
                     </div>
