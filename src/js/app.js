@@ -37,3 +37,4 @@ app.controller('SimpleArrayCtrl', ['$scope', function SimpleArrayCtrl($scope) {
         every(function (key) { return !filterObj[key]; });
     }
 }]);
+

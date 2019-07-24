@@ -393,10 +393,11 @@ main {
   .selection_items-description {
     margin-bottom: 16px; }
   .selection_items-elements {
+    display: inline-block;
     background-color: #fff;
     color: #000;
-    display: inline-block;
     padding: 0 12px;
+    margin: 0 12px 12px 0;
     -webkit-border-radius: 4px;
             border-radius: 4px;
     font-size: 16px;
@@ -405,15 +406,6 @@ main {
     padding-left: 10px;
     border-left: 1px solid #000;
     cursor: pointer; }
-  .selection_items-btn_wrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
   .selection_items-btn {
     display: block;
     width: 100%;
@@ -453,26 +445,16 @@ main {
   .selection_dialog-title {
     text-transform: uppercase;
     margin-bottom: 18px; }
-  .selection_dialog-head {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
   .selection_dialog-input {
+    width: 100%;
     font-size: 14px;
     line-height: 34px;
     padding-left: 12px;
     border: 0;
     -webkit-border-radius: 4px;
-            border-radius: 4px; }
-  .selection_dialog-select {
-    font-size: 14px;
-    line-height: 34px;
-    border: 0; }
+            border-radius: 4px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
   .selection_dialog-content {
     background-color: #000;
     padding: 12px;

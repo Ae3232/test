@@ -116,20 +116,15 @@
                             <form action="" class="selection_dialog-search">
                                 <input type="text" name="search" placeholder="Поиск" class="selection_dialog-input" ng-model="search.$">
                             </form>
-                            <select name="" id="" class="selection_dialog-select">
-                                <option value="">Номер > 10</option>
-                                <option value="">Номер > 100</option>
-                                <option value="">Номер > 200</option>
-                            </select>
                         </div>
                         <div class="selection_dialog-content">
-                            <div for="" class="checkbox" ng-repeat="fruitName in fruits | filter:search">
+                            <div class="checkbox" ng-repeat="fruitName in fruits | filter:search" id="myList">
                                 <input  type="checkbox" 
                                         id="{{fruitName}}" 
                                         class="checkbox_image" 
                                         name="selectedFruits[]"
                                         value="{{fruitName}}"
-                                        ng-model="toggleSelection['fruit']">
+                                        ng-checked="selection.indexOf(fruitName) > -1">
                                 <label class="checkbox_label" for="{{fruitName}}">{{fruitName}}</label>
                             </div>
                         </div>
